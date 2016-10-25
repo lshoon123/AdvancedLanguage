@@ -19,7 +19,34 @@ void main()
 
 	if (b % 2 == 1)
 	{
-		cout << "it is not the same backwards as forwards";
+		int c = b/2;
+		for (i = 0; i < c; i++)
+		{
+			d *= 10;
+		}
+		front = a / (10*d);
+		end = a % d;
+		for (d = d / 10; d > 0; d = d / 10)
+		{
+			check1 = front / d;
+			check2 = end % e;
+			if (check1 == check2)
+			{
+				front = front% d;
+				end = end / e;
+				count++;
+			}
+			else
+			{
+				cout << "it is not the same backwards as forwards";
+				break;
+			}
+		}
+		if (count == c)
+		{
+			cout << "it is the same backwards as forwards";
+		}
+		//cout << "it is not the same backwards as forwards";
 	}
 
 	else
